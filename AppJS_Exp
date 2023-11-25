@@ -1,0 +1,24 @@
+Imports:
+Importa vários componentes do Chakra UI, incluindo ícones, caixas, flex containers, botões e tabelas.
+Importa os hooks useEffect e useState do React.
+Importa um componente chamado ModalComp de um arquivo chamado ModalComp.js.
+
+Componente App:
+Define um componente funcional chamado App.
+Utiliza o hook useDisclosure do Chakra UI para controlar o estado de abertura/fechamento de um modal.
+Define dois estados usando o hook useState: data para armazenar os dados dos clientes e dataEdit para armazenar os dados de um cliente específico que está sendo editado.
+Utiliza o hook useBreakpointValue para determinar se a aplicação está rodando em um dispositivo móvel ou em uma tela grande.
+Utiliza o useEffect para obter dados armazenados localmente quando o componente é montado.
+
+Função handleRemove:
+Remove um cliente da lista com base no endereço de e-mail.
+Atualiza o estado data com a nova lista e armazena a lista atualizada localmente.
+
+Renderização do Componente:
+Renderiza uma estrutura Flex do Chakra UI para centralizar o conteúdo na tela.
+Renderiza um componente Box que contém o botão "NOVO CADASTRO" e uma tabela para exibir os clientes.
+A tabela exibe informações sobre os clientes, como nome e e-mail, e fornece ícones de edição e exclusão para cada cliente.
+Se o modal estiver aberto (isOpen é verdadeiro), renderiza o componente ModalComp passando as informações necessárias.
+
+Modal:
+O modal (ModalComp) é responsável por adicionar ou editar clientes. Ele recebe várias propriedades, incluindo o estado data, setData, dataEdit, e setDataEdit.
