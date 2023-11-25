@@ -1,0 +1,25 @@
+Imports:
+Importa vários componentes do Chakra UI relacionados a modais, botões, caixas, formulários, etc.
+Importa o hook useState do React.
+
+Componente ModalComp:
+Define um componente funcional chamado ModalComp que recebe várias propriedades (data, setData, dataEdit, isOpen, onClose).
+Utiliza o hook useState para criar estados locais name e email, inicializados com os valores de dataEdit.name e dataEdit.email ou uma string vazia, respectivamente.
+
+Função handleSave:
+É chamada quando o botão "SALVAR" é clicado no modal.
+Verifica se os campos de nome e e-mail estão preenchidos; caso contrário, a função retorna.
+Verifica se o e-mail já existe na lista de clientes; se existir, exibe um alerta e retorna.
+Se a edição de dados estiver em andamento (Object.keys(dataEdit).length é verdadeiro), atualiza os dados do cliente na posição correspondente no array data.
+Cria um novo array newDataArray com os dados atualizados ou adiciona um novo cliente se não estiver editando.
+Atualiza os dados localmente no armazenamento do navegador e no estado data.
+Fecha o modal.
+
+Função emailAlreadyExists:
+Verifica se o e-mail já existe na lista de clientes, excluindo o caso em que o e-mail pertence ao cliente atualmente em edição.
+
+Renderização do Modal:
+Renderiza um modal usando os componentes do Chakra UI.
+O modal inclui um cabeçalho, um botão de fechar, um corpo contendo campos de formulário para nome e e-mail, e um rodapé com botões de "SALVAR" e "CANCELAR".
+Os campos de formulário são controlados pelos estados name e email, e suas alterações são tratadas pelos métodos setName e setEmail.
+O botão "SALVAR" chama a função handleSave, e o botão "CANCELAR" fecha o modal
